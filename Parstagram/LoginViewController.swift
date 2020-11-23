@@ -27,6 +27,7 @@ class LoginViewController: UIViewController {
           (user: PFUser?, error: Error?) -> Void in
           if user != nil {
             // Do stuff after successful login.
+            print("logged in")
             self.performSegue(withIdentifier: "loginSegue", sender: nil)
           } else {
             // The login failed. Check error to see why.

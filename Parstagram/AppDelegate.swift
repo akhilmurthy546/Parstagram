@@ -12,8 +12,8 @@ import Parse
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+//    var window:UIWindow?
+//
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let parseConfig = ParseClientConfiguration {
                 $0.applicationId = "N5OrCXx7SnuyZWJQeAIWaM9gSuKLGlxC5n3BKvAK" // <- UPDATE
@@ -22,6 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initialize(with: parseConfig)
         // Override point for customization after application launch.
+        
+//        if PFUser.current() != nil {
+//            let main = UIStoryboard(name: "Main", bundle: nil)
+//            let feedNavigationController = main.instantiateViewController(identifier: "FeedNavigationController")
+//
+//            window?.rootViewController = feedNavigationController
+//        }
         return true
     }
 
